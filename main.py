@@ -105,6 +105,7 @@ def decode_jwt():
 
 def _get_jwt(user_data):
     exp_time = datetime.datetime.utcnow() + datetime.timedelta(weeks=2)
+    #added one test
     payload = {'exp': exp_time,
                'nbf': datetime.datetime.utcnow(),
                'email': user_data['email']}
